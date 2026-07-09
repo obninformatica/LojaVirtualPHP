@@ -18,6 +18,8 @@ class Uri
 
 	public function getUri()
 	{
+		//dump($this->uri,'vamos em frente');
 		return $this->uri;
+
 	}
 }

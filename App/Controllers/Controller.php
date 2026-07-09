@@ -9,7 +9,7 @@ class Controller
 	const FOLDERS_CONTROLLER = ['Site','Admin'];
 	const ERROR_CONTROLLER = '\\App\\Controllers\\Erro\\ErroController';
 
-	private $controller;
+	//private $controller;
 	private $uri;
 
 	public function __construct()
@@ -29,9 +29,9 @@ class Controller
 	public function controller()
 	{
 		$controller = $this->getController();
+		dump($controller);
 		foreach(self::FOLDERS_CONTROLLER as $folderController)
 		{
-			//return $folderController;
 			if(class_exists(self::NAMESPACE_CONTROLLER.$folderController.'\\'.$controller))
 			{
 				return self::NAMESPACE_CONTROLLER.$folderController.'\\'.$controller;
@@ -43,5 +43,4 @@ class Controller
 // localhost/produto/calca
 //$controller = 'produto';
 //$metodo = 'calca';
-
 }
