@@ -24,12 +24,13 @@ class Controller
 			$explodeUri = array_filter(explode('/', $this->uri->getUri()));
 			return ucfirst($explodeUri[1]).'Controller';
 		}
+		return ucfirst(DEFAULT_CONTROLLER).'Controller';
 	}
 
 	public function controller()
 	{
 		$controller = $this->getController();
-		dump($controller);
+		//dump($controller);
 		foreach(self::FOLDERS_CONTROLLER as $folderController)
 		{
 			if(class_exists(self::NAMESPACE_CONTROLLER.$folderController.'\\'.$controller))

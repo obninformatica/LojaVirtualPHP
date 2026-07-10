@@ -13,7 +13,7 @@ class ErroController
 {
     public function index()
     {
-        dump('Erro 404, Página não encontrada');
+        dump('Erro, Produto não encontrado');
     }
 
 }

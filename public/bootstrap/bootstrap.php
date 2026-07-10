@@ -12,6 +12,7 @@ $twig = $template->init();
 $callController = new App\Controllers\Controller();
 $calledController = $callController->controller();
 $controller = new $calledController();
+$controller->setTwig($twig);
 
 /**
  * Chamando o metodo digitado na URL
@@ -24,10 +25,6 @@ $method = $callMethod->method($controller);
  * Chamando o controller através da classe controller e da classe method
  */
 $controller->$method();
-
-
-
-
 
 //==================== estava nesta ordem
 //$controller = new App\Controllers\Controller();

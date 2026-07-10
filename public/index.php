@@ -2,6 +2,7 @@
 //print_r($_SERVER["REQUEST_URI"]);
 if(preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"]))
 {
+	print_r('Material sensivel a defeitos');
 	return false;	// serve the request resources as-is 
 }
 else
