@@ -1,6 +1,9 @@
 <?php
-
 use App\Classes\Template;
+use App\Classes\Parameters;
+
+$parameters = new Parameters();
+dump($parameters->explodeParameters());
 
 $template = new Template();
 $twig = $template->init();
