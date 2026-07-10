@@ -8,8 +8,9 @@
 
 namespace App\Controllers\Site;
 
+use App\Controllers\BaseController;
 
-class ProdutoController
+class ProdutoController extends BaseController
 {
     public function index()
     {
