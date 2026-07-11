@@ -12,14 +12,14 @@ use App\Controllers\BaseController;
 
 class ProdutoController extends BaseController
 {
-    public function index()
+    public function index($parameters)
     {
-        dump('index');
+        dump($parameters[2]);
     }
 
-    public function calca()
+    public function calca($parameters)
     {
-        dump('calca');
+        dump($parameters[2]);
     }
 
 }

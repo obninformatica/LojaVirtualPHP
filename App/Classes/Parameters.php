@@ -32,12 +32,13 @@ class Parameters
         {
             $this->explodeParameters();
 
-            if(method == 'index')
+            if($method == 'index')
             {
-                return isset($this->parameter[2]) ? $this->parameter[2] : null;
+                unset($this->parameter[1]);
+                return isset($this->parameter[2]) ? array_values($this->parameter) : null;
             }
-
-            return isset($this->parameter[3]) ? $this->parameter[3] : null;
+            unset($this->parameter[1],$this->parameter[2]);
+            return isset($this->parameter[3]) ? array_values($this->parameter) : null;
         }
     }
 
