@@ -1,33 +1,32 @@
-<div class="top_search">
-    <form method="get" action="/busca/">
-        <div class="search_text">
-            <a href="#">Buscar Produto</a>
-        </div>
-        <input class="search_input" type="text" name="b"/>
-        <button type="submit" class="btn" style="margin-top: 8px;margin-left: 2px;">Buscar</button>
-    </form>
-</div><!-- end top_search -->
+<div id="logo">
+    <a href="/">
+        <img src="{{ site_url() }}/assets/images/logo.png" alt="" border="0" width="237" height="140" />
+    </a>
+</div><!-- end logo -->
 
-<div class="header">
-    <div id="logo">
-        <a href="#">
-            <img src="{{ site_url() }}/assets/images/logo.png" alt="" border="0" width="237" height="140" />
-        </a>
-    </div><!-- end div logo -->
-
-    <div class="oferte_content">
-        <div class="top_divider">
-            <img src="{{ site_url() }}/assets/images/header_divider.png" alt="" width="1" height="164" />
-        </div>
-        <div class="oferta">
-            <div class="oferta_content">
-                <div class="oferta_details">
-                    Propaganda aqui
-                </div>
+<div class="oferte_content">
+    <div class="top_divider">
+        <img src="{{ site_url() }}/assets/images/header_divider.png" alt="" width="3" height="164" />
+    </div>
+    <div class="oferta">
+        <div class="oferta_content">
+            <img src="{{ site_url() }}/assets/images/editadas/notebook_samsung.png" width="94" height="92" alt="" border="0" class="oferta_img" />
+            <div class="oferta_details">
+                <div class="oferta_title" style="color: #696969" >Notebook Samsung Book4</div><hr/>
+                <div class="oferta_text" style="color: #275b28">Notebook Samsung Book4 Intel Pentium U300 8GB 256gb Ssd Windows 11 Home</div>
+                <a href="details.html" class="details">details</a>
             </div>
-        </div><!-- end div oferta -->
-        <div class="top_divider">
-            <img src="{{ site_url() }}/assets/images/header_divider.png" alt="" width="1" height="164" />
         </div>
-    </div><!-- end div oferte content -->
-</div><!-- end div header -->
+        <div class="oferta_pagination">
+            <span class="current">1</span>
+            <a href="/">2</a>
+            <a href="/">3</a>
+            <a href="/">4</a>
+            <a href="/">5</a>
+        </div>
+    </div>
+    <div class="top_divider">
+        <img src="{{ site_url() }}/assets/images/header_divider.png" alt="" width="3" height="164" />
+    </div>
+</div>
+<!-- end of oferte_content-->

@@ -14,12 +14,13 @@
 	<div id="main_container">
 		<div class="top_bar">
 			<!-- include do top search -->
-			{% include 'includes/site_header.html' %}
+			{% include 'includes/site_top_search.html' %}
 		</div><!-- end top bar -->
 		
 		<!-- área do header -->
 		<div id="header">
 			<!-- include do header -->
+			{% include 'includes/site_header.html' %}
 		</div>
 		
 		<div id="main_content">
@@ -50,53 +51,56 @@
 				<div class="border_box">
 					<input class="newsletter" type="text" name="newsletter" value="Seu Email"/>
 					<a class="join" href="">Cadastrar Email</a>
-					<div class="banner_adds">
-						<a href="">
-							<img src="{{ site_url() }}/assets/images/bann3.jpg" alt="" border="0"/> 
-						</a>
-					</div>
 				</div>
+				
+				<div class="banner_adds">
+					<a href="">
+						<img src="{{ site_url() }}/assets/images/bann2.jpg" alt="" border="0"/>
+					</a>
+				</div>
+			
 			</div><!-- end left-content -->
 			
 			<div class="center_content">
-				{% block content %}{% endblock %}
+				{% block site_content %}{% endblock %}
 			</div><!-- end center content -->
 			
 			<div class="right_content">
+				<!-- total de compras do carrinho -->
 				<div class="shopping_cart">
 					<div class="cart_title">Carrinho de Compras</div>
-					<div class="cart_details">
-						<span id="products_cart"><!-- numero de produtos no carrinho --></span><br/>
-						<span class="border_cart"></span>
-						Total: <span class="price"><!-- total de compras do carrinho --></span>
+					<div class="cart_details"> 3 itens <br />
+						<!-- <span id="products_cart"></span><br/> -->
+						<span class="border_cart"></span><!-- numero de produtos no carrinho -->
+						Total: <span class="price"> R$ 350,00 </span>
 					</div>
 					
 					<div class="cart_icon">
-						<a href="" title="header=[Checkout] body=[&nbsp] fade=[on]">
+						<a href="#" title="header=[Checkout] body=[&nbsp] fade=[on]">
 							<img src="{{ site_url() }}/assets/images/shoppingcart.png" alt="" width="48"height="48" border="0" />	
 						</a>
 						<!-- icone do carrinho -->
 					</div>
+				</div>	
 					
-					<div class="title_box">Novidades</div>
-					<div class="border_box">
-						<div class="product_title"><!-- titulo do produto novidade --></div>
-						<div class="product_image"><!-- imagem do produto que é novidade --></div>
-						<div class="prod_price">
-							<div class="price"><!-- preço do produto que é novidade --></div>
-						</div>
-					</div><!-- end border box -->
+				<div class="title_box">Novidades</div>
+				<div class="border_box">
+					<div class="product_title"><!-- titulo do produto novidade --></div>
+					<div class="product_image"><!-- imagem do produto que é novidade --></div>
+					<div class="prod_price">
+						<div class="price"><!-- preço do produto que é novidade --></div>
+					</div>
+				</div><!-- end border box -->
 					
-					<div class="title_box">Marcas</div>
-					<!-- include das marcas -->
-					<div class="banner_adds">
-						<!-- banner de promoção, propaganda -->
-					</div>
-					<div class="banner_adds">
-						<a href="#">
-							<img src="{{ site_url() }}/assets/images/bann1.jpg" alt="" border="0" />
-						</a>
-					</div>
+				<div class="title_box">Marcas</div>
+				<!-- include das marcas -->
+				<div class="banner_adds">
+					<!-- banner de promoção, propaganda -->
+				</div>
+				<div class="banner_adds">
+					<a href="#">
+						<img src="{{ site_url() }}/assets/images/bann1.jpg" alt="" border="0" />
+					</a>
 				</div>
 			</div><!-- end right content -->
 			

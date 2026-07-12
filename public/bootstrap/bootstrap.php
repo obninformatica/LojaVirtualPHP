@@ -5,7 +5,9 @@ use App\Classes\Parameters;
 $template = new Template();
 $twig = $template->init();
 
+// Chamando as funcções do functionsTwig
 $twig->addFunction($site_url);
+$twig->addFunction($categorias);
 
 /**
  * chamando o controller digitado na URL
