@@ -5,9 +5,7 @@
  * Date: 25/06/2026
  * Time: 10:59
  */
-
 namespace App\Controllers;
-
 
 use App\Classes\Uri;
 

@@ -23,7 +23,7 @@ class Parameters
         // produto/calca/tipo/jeans/grande/azul
         $explodeUri = explode('/',$this->uri);
         $this->parameter = array_filter($explodeUri);
-        dump($this->parameter);
+        //dump($this->parameter);
     }
 
     public function getParameterMethod($object, $method)

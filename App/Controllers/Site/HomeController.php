@@ -8,20 +8,14 @@
 
 namespace App\Controllers\Site;
 use App\Controllers\BaseController;
-//use App\Models\Site\UsersModel;
 use App\Repositories\Site\ProdutoRepository;
-
 
 class HomeController extends BaseController
 {
     public function index()
     {
         $produtoRepository = new ProdutoRepository();
-        dump($produtoRepository->listarProdutosOrdenadosComLimite(3));
-        //$user = new UsersModel();
-        //dump($user->fetchAll());
-        //dump($user->fetch());
-        //dump($user->find('id',1));
+        $produtoRepository->listarProdutosOrdenadosComLimite(3);
 
         $dados =
         [
@@ -29,11 +23,8 @@ class HomeController extends BaseController
             'nome' => 'Engenheiro Osvaldo'
         ];
 
-
-        //dump('Chamando a index do home');
         $template = $this->twig->load('site_home.html');
         $template->display($dados);
-
 
     }
 }

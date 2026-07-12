@@ -5,9 +5,7 @@
  * Date: 28/06/2026
  * Time: 09:00
  */
-
 namespace App\Classes;
-
 
 class Template
 {

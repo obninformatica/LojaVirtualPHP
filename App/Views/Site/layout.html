@@ -14,6 +14,7 @@
 	<div id="main_container">
 		<div class="top_bar">
 			<!-- include do top search -->
+			{% include 'includes/site_header.html' %}
 		</div><!-- end top bar -->
 		
 		<!-- área do header -->
@@ -24,6 +25,7 @@
 		<div id="main_content">
 			<div id="menu_tab">
 				<!-- include do menu -->
+				{% include 'includes/site_menu.html' %}
 			</div>
 			
 			<div class="crumb_navigation"><!-- breadcrumb --></div>
@@ -33,6 +35,7 @@
 				
 				<ul class="left_menu">
 					<!-- include do left-menu -->
+					{% include 'includes/site_left_menu.html' %}
 				</ul>
 				
 				<div class="title_box">Promoção</div>
@@ -49,7 +52,7 @@
 					<a class="join" href="">Cadastrar Email</a>
 					<div class="banner_adds">
 						<a href="">
-							<!-- <img src="" alt=""/> banner promoção, propaganda -->
+							<img src="{{ site_url() }}/assets/images/bann3.jpg" alt="" border="0"/> 
 						</a>
 					</div>
 				</div>
@@ -69,7 +72,9 @@
 					</div>
 					
 					<div class="cart_icon">
-						<a href="" title="header=[Checkout] body=[&nbsp] fade=[on]"></a>
+						<a href="" title="header=[Checkout] body=[&nbsp] fade=[on]">
+							<img src="{{ site_url() }}/assets/images/shoppingcart.png" alt="" width="48"height="48" border="0" />	
+						</a>
 						<!-- icone do carrinho -->
 					</div>
 					
@@ -87,16 +92,23 @@
 					<div class="banner_adds">
 						<!-- banner de promoção, propaganda -->
 					</div>
+					<div class="banner_adds">
+						<a href="#">
+							<img src="{{ site_url() }}/assets/images/bann1.jpg" alt="" border="0" />
+						</a>
+					</div>
 				</div>
 			</div><!-- end right content -->
 			
 			<div class="footer">
 				<div class="left_footer">
 					<!-- imagem footer -->
+					<img src="{{ site_url() }}/assets/images/footer_logo.png" alt="" width="170" height="49" />
 				</div>
 				
 				<div class="center_footer">
 					Loja asolucoesweb.Todos direitos reservados {{ 'now' | date('d/m/Y') }} <br/>
+					<img src="{{ site_url() }}/assets/images/payment.gif" alt="" />
 				</div>
 				
 				<div class="right_footer">

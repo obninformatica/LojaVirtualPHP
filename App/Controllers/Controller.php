@@ -9,7 +9,6 @@ class Controller
 	const FOLDERS_CONTROLLER = ['Site','Admin'];
 	const ERROR_CONTROLLER = '\\App\\Controllers\\Erro\\ErroController';
 
-	//private $controller;
 	private $uri;
 
 	public function __construct()

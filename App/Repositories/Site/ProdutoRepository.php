@@ -5,7 +5,7 @@
  * Date: 11/07/2026
  * Time: 21:26
  */
-namespace App\Repositories\site;
+namespace App\Repositories\Site;
 
 use App\Models\Site\ProdutoModel;
 
