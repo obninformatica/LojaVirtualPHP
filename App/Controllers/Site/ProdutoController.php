@@ -14,12 +14,12 @@ class ProdutoController extends BaseController
 {
     public function index($parameters)
     {
-        dump($parameters[2]);
+        dump($parameters[4]);
     }
 
     public function calca($parameters)
     {
-        dump($parameters[2]);
+        dump($parameters[4]);
     }
 
 }
