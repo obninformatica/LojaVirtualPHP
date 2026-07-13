@@ -17,5 +17,6 @@ class ErroController extends BaseController
         dump('Erro, Produto não encontrado');
 
     }
-
 }
+?>
+<a class="lang" href="/">Retornar</a>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Repositories\Site\CategoriaRepository;
+use App\Repositories\Site\ProdutoRepository;
 
 $site_url = new \Twig\TwigFunction('site_url', function(){
     return 'http://'.$_SERVER['SERVER_NAME'];
@@ -12,8 +13,11 @@ $categorias = new \Twig\TwigFunction('categorias', function(){
     return $categoriaRepository->listarCategoriasProdutos();
 });
 
-
-
+// Listar as novidades no right menu
+$novidade = new \Twig\TwigFunction('novidade', function(){
+    $produtoRepository = new ProdutoRepository();
+    return $produtoRepository->ultimoProdutoAdicionado();
+});
 
 /*
 *

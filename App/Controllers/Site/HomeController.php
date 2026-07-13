@@ -15,7 +15,7 @@ class HomeController extends BaseController
     public function index()
     {
         $produtoRepository = new ProdutoRepository();
-        $produtoRepository->listarProdutosOrdenadosComLimite(3);
+        $produtoRepository->listarProdutosOrdenadosPeloDestaque(3);
 
         $dados =
         [
