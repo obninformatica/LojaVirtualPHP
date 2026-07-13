@@ -15,12 +15,12 @@ class HomeController extends BaseController
     public function index()
     {
         $produtoRepository = new ProdutoRepository();
-        $produtoRepository->listarProdutosOrdenadosPeloDestaque(3);
+        $produtoDestaque = $produtoRepository->listarProdutosOrdenadosPeloDestaque(6);
 
         $dados =
         [
             'titulo' => 'Curso PHPOO | Loja Virtual',
-            'nome' => 'Engenheiro Osvaldo'
+            'produtos' => $produtoDestaque
         ];
 
         $template = $this->twig->load('site_home.html');
