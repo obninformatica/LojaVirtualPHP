@@ -14,12 +14,12 @@
             </a>
         </div><!-- end product title -->
     </div><!-- end center prod box -->
-    <div class="product_image">
+    <div class="product_image" style="text-align: center">
         <a href="/detalhes/{{ produto.produto_slug }}">
             <img src="{{ site_url() }}/{{ produto.produto_foto }}" alt="{{ produto.produto_slug }}" height="90" width="90"/>
         </a>
     </div><!-- end product image -->
-    <div class="prod_price">
+    <div class="prod_price" style="text-align: center">
         {% if(produto.produto_promocao) == 1 %}
         <span class="reduce">
             R$ {{ produto.produto_valor | number_format(2,',','.') }} <br/>
@@ -33,7 +33,10 @@
 
     <div class="bottom_prod_price"></div>
     <div class="prod_details_tab">
+        <a href="#" class="btn-add-carrinho" title="header=[Adicionar ao carrinho] body=[&nbsp;] fade=[on]">
+            <img src="{{ site_url }}/assets/images/cart.gif" alt="" class="left_bt"/>
 
+        </a>
         {% if (produto.produto_destaque == 1) %}
         <a href="#" title="header=[Destaque] body=[&nbsp;] fade=[on]">
             <img src="{{ site_url }}/assets/images/favs.gif" alt="" border="0" class="left_bt"/>
@@ -62,12 +65,12 @@
             </a>
         </div><!-- end product title -->
     </div><!-- end center prod box -->
-    <div class="product_image">
+    <div class="product_image" style="text-align: center">
         <a href="/detalhes/{{ produtoPromocao.produto_slug }}">
             <img src="{{ site_url() }}/{{ produtoPromocao.produto_foto }}" alt="{{ produtoPromocao.produto_slug }}" height="90" width="90"/>
         </a>
     </div><!-- end product image -->
-    <div class="prod_price">
+    <div class="prod_price" style="text-align: center">
         {% if(produtoPromocao.produto_promocao) == 1 %}
         <span class="reduce">
             R$ {{ produtoPromocao.produto_valor | number_format(2,',','.') }} <br/>

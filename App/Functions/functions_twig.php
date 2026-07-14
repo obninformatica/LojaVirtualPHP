@@ -19,6 +19,12 @@ $novidade = new \Twig\TwigFunction('novidade', function(){
     return $produtoRepository->ultimoProdutoAdicionado();
 });
 
+// Listar as novidades no right menu
+$promocao = new \Twig\TwigFunction('promocao', function(){
+    $produtoRepository = new ProdutoRepository();
+    return $produtoRepository->listarProdutosPromocao(1);
+});
+
 /*
 *
 *  $twig = new \Twig\Environment($loader);
