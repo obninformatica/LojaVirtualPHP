@@ -31,9 +31,72 @@
         {% endif %}
     </div><!-- end prod price -->
 
+    <div class="bottom_prod_price"></div>
+    <div class="prod_details_tab">
+
+        {% if (produto.produto_destaque == 1) %}
+        <a href="#" title="header=[Destaque] body=[&nbsp;] fade=[on]">
+            <img src="{{ site_url }}/assets/images/favs.gif" alt="" border="0" class="left_bt"/>
+        </a>
+        {% endif %}
+
+        {% if (produto.produto_presente == 1) %}
+        <a href="#" title="header=[Presente] body=[&nbsp;] fade=[on]">
+            <img src="{{ site_url }}/assets/images/favorites.gif" alt="" border="0" class="left_bt"/>
+        </a>
+        {% endif %}
+
+    </div>
+
 </div><!-- end prod box -->
-
-
 {% endfor %}
 
+<div class="center_title_bar">Produtos em Promoção</div>
+{% for produtoPromocao in produtosPromocao %}
+<div class="prod_box">
+    <div class="top_prod_box"></div>
+    <div class="center_prod_box">
+        <div class="product_title">
+            <a href="/detalhes/{{ produtoPromocao.produto_slug }}">
+                {{ produtoPromocao.produto_nome }}
+            </a>
+        </div><!-- end product title -->
+    </div><!-- end center prod box -->
+    <div class="product_image">
+        <a href="/detalhes/{{ produtoPromocao.produto_slug }}">
+            <img src="{{ site_url() }}/{{ produtoPromocao.produto_foto }}" alt="{{ produtoPromocao.produto_slug }}" height="90" width="90"/>
+        </a>
+    </div><!-- end product image -->
+    <div class="prod_price">
+        {% if(produtoPromocao.produto_promocao) == 1 %}
+        <span class="reduce">
+            R$ {{ produtoPromocao.produto_valor | number_format(2,',','.') }} <br/>
+        </span>
+        R$ {{ produtoPromocao.produto_valor_promocao | number_format(2,',','.') }}
+        {% else %}
+        R$ {{ produtoPromocao.produto_valor | number_format(2,',','.') }}
+
+        {% endif %}
+    </div><!-- end prod price -->
+
+    <div class="bottom_prod_price"></div>
+    <div class="prod_details_tab">
+
+        {% if (produtoPromocao.produto_destaque == 1) %}
+        <a href="#" title="header=[Destaque] body=[&nbsp;] fade=[on]">
+            <img src="{{ site_url }}/assets/images/favs.gif" alt="" border="0" class="left_bt"/>
+        </a>
+        {% endif %}
+
+        {% if (produtoPromocao.produto_presente == 1) %}
+        <a href="#" title="header=[Presente] body=[&nbsp;] fade=[on]">
+            <img src="{{ site_url }}/assets/images/favorites.gif" alt="" border="0" class="left_bt"/>
+        </a>
+        {% endif %}
+
+    </div>
+
+</div><!-- end prod box -->
+
+{% endfor %}
 {% endblock %}

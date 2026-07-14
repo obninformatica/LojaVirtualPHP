@@ -14,13 +14,18 @@ class HomeController extends BaseController
 {
     public function index()
     {
+        // listar pelo destaque
         $produtoRepository = new ProdutoRepository();
         $produtoDestaque = $produtoRepository->listarProdutosOrdenadosPeloDestaque(6);
 
+        // listar pela promoção
+        $produtoPromocao = $produtoRepository->listarProdutosPromocao(6);
+        //dump($produtoPromocao);
         $dados =
         [
             'titulo' => 'Curso PHPOO | Loja Virtual',
-            'produtos' => $produtoDestaque
+            'produtos' => $produtoDestaque,
+            'produtosPromocao' => $produtoPromocao
         ];
 
         $template = $this->twig->load('site_home.html');
