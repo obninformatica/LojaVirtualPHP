@@ -2,6 +2,7 @@
 
 use App\Repositories\Site\CategoriaRepository;
 use App\Repositories\Site\ProdutoRepository;
+use App\Classes\BreadCrumb;
 
 $site_url = new \Twig\TwigFunction('site_url', function(){
     return 'http://'.$_SERVER['SERVER_NAME'];
@@ -17,6 +18,12 @@ $categorias = new \Twig\TwigFunction('categorias', function(){
 $novidade = new \Twig\TwigFunction('novidade', function(){
     $produtoRepository = new ProdutoRepository();
     return $produtoRepository->ultimoProdutoAdicionado();
+});
+
+// breadCrumb
+$breadCrumb = new \Twig\TwigFunction('breadCrumb', function(){
+    $breadCrumb = new BreadCrumb();
+    return $breadCrumb->createBreadCrumb();
 });
 
 // Listar as novidades no right menu

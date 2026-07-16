@@ -29,7 +29,10 @@
 				{% include 'includes/site_menu.html' %}
 			</div>
 			
-			<div class="crumb_navigation"><!-- breadcrumb --></div>
+			<div class="crumb_navigation">
+				{{ breadCrumb() | raw }}
+				<!-- breadcrumb -->
+			</div>
 			<!-- Área para o left content -->
 			<div class="left_content">
 				<div class="title_box">Categorias</div>
