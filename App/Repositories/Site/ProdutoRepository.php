@@ -44,4 +44,14 @@ class ProdutoRepository
         $this->produto->typeDatabase->execute();
         return $this->produto->typeDatabase->fetchAll();
     }
+//  buscar produto
+    public function buscarProduto($busca)
+    {
+        $sql = "select * from {$this->produto->table} where produto_nome like ? or produto_descricao like ?";
+        $this->produto->typeDatabase->prepare($sql);
+        $this->produto->typeDatabase->bindValue(1,'%'.$busca.'%');
+        $this->produto->typeDatabase->bindValue(2,'%'.$busca.'%');
+        $this->produto->typeDatabase->execute();
+        return $this->produto->typeDatabase->fetchAll();
+    }
 }

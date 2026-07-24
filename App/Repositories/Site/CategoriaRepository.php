@@ -18,13 +18,13 @@ class CategoriaRepository
         $this->categoria = new CategoriaModel();
     }
 
-    public function listarCategoriasProdutos()
-    {
-        $sql = "select categoria_slug,categoria_nome from {$this->categoria->table} inner join produtos on (categorias.id = produtos.produto_categoria) group by categorias.id";
-        //$sql = "select * from {$this->categoria->table} group by categorias.id";
-        $this->categoria->typeDatabase->prepare($sql);
-        $this->categoria->typeDatabase->execute();
-        return $this->categoria->typeDatabase->fetchAll();
+    //public function listarCategoriasProdutos()
+    //{
+        //$sql = "select categoria_slug,categoria_nome from {$this->categoria->table} inner join produtos on (categorias.id = produtos.produto_categoria) group by categorias.id";
+        //$sql = "select categoria_slug,categoria_nome from {$this->categoria->table} group by categorias.id";
+        //$this->categoria->typeDatabase->prepare($sql);
+        //$this->categoria->typeDatabase->execute();
+        //return $this->categoria->typeDatabase->fetchAll();
         //dump($this->categoria->typeDatabase->fetchAll());
-    }
+    //}
 }

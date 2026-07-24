@@ -25,15 +25,15 @@ class BreadCrumb
         if(substr_count($this->uri, '?') > 0)
         {
             $explodeIgual = explode('=',$this->uri);
-            return "<span style='color: #000000;'> Você está buscando:</span><span style='font-style: italic;'><a href='/' style='text-decoration: none;'>Inicio</a>".str_replace('+','-', $explodeIgual[1].'</span>');
+            return "<span style='color: #000000;'> Você está buscando:</span><span style='font-weight:bold;font-style: italic;font-size:14px;color: blue;'>".str_replace('+','-', $explodeIgual[1])."</span>";
         }
 //      bread crumb para a página inicial
         if($this->uri == '/')
         {
-            return "<span style='color: #000;'>Navegação</span>: <span style='font-style: italic;'>Início</span>";
+            return "<span style='color: #000;'>Navegação</span>: <span style='font-style: italic;color: blue;'>Início</span>";
         }
 //      para outras páginas internas do site
-        return "<span style='color: #000;'>Navegação</span>: <span style='font-style: italic;'><a href='/' style='text-decoration: none;'>Inicio</a>/" . ucfirst(ltrim($this->uri, '/') . '</span>');
+        return "<span style='color: #000;'>Navegação</span>: <span style='font-style: italic;color: blue;'><a href='/' style='text-decoration: none;color: blue;'>Inicio</a>/" . ltrim($this->uri, '/') . '</span>';
 
     }
 
