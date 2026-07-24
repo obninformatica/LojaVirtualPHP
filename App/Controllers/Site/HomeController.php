@@ -7,6 +7,7 @@
  */
 
 namespace App\Controllers\Site;
+//use App\Classes\Carrinho;
 use App\Controllers\BaseController;
 use App\Repositories\Site\ProdutoRepository;
 
@@ -14,6 +15,11 @@ class HomeController extends BaseController
 {
     public function index()
     {
+//        $carrinho = new Carrinho();
+//        $carrinho->produtoCarrinho(2);
+//      unset($_SESSION['carrinho']);
+//        dump($carrinho->statusCarrinho->carrinho());
+
         // listar pelo destaque
         $produtoRepository = new ProdutoRepository();
         $produtoDestaque = $produtoRepository->listarProdutosOrdenadosPeloDestaque(6);
