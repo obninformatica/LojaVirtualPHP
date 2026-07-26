@@ -1,6 +1,3 @@
-/**
- * Created by Osvaldo on 24/07/2026.
- */
 $(document).ready(function(){
 
     var main_content = $("#main_content"); /* ok */
@@ -12,17 +9,15 @@ $(document).ready(function(){
 
     btn_add_carrinho.on('click',function(event){
 		event.preventDefault();
-		/* console.log('add no carrinho'); */
-		var idProduto = $(this).attr('data-id');
-		/* console.log(idProduto); */
 		
+		var idProduto = $(this).attr('data-id');
+				
 		$.ajax({
 			url:'/carrinho/add/'+idProduto,
 			type:'POST',
-			seccess:function(retorno){
+			success:function(retorno){
 				console.log(retorno);
 			}
-			
 		});
     });
-})
+});
