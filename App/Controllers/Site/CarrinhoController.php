@@ -21,6 +21,19 @@ class CarrinhoController extends BaseController
         $this->carrinho = new Carrinho();
         $this->produtosCarrinhoRepository = new ProdutosCarrinhoRepository();
     }
+
+    public function index()
+    {
+        $produtos = $this->produtosCarrinhoRepository->produtosNoCarrinho();
+
+        $dados = [
+            'titulo' => 'Curso PHPOO | Carrinho',
+            'produtos' => $produtos
+        ];
+        $template = $this->twig->load('site_carrinho.html');
+        $template->display($dados);
+    }
+
     public function add($param)
     {
         $this->carrinho->add($param[0]);

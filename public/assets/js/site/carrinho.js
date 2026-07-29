@@ -14,9 +14,10 @@ $(document).ready(function(){
 			dataType: 'json',
 			success: function(retorno)
 			{
-				console.log("A grande Volta: ",retorno);
+				numeral.locale('pt-br');
+				//console.log("A grande Volta: ",retorno);
 				products_cart.html(retorno.numeroProdutosCarrinho);
-				price_cart.html(retorno.valorProdutosCarrinho);
+				price_cart.html(numeral(retorno.valorProdutosCarrinho).format('$0,0.00'));
 			}/* end call back success */
 		});/* end ajax /carrinho/get */
 	} /* end totalProdutosCarrinho() */

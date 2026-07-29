@@ -1,8 +1,14 @@
 <div class="shopping_cart">
     <div class="cart_title">Carrinho de Compras</div>
     <div class="cart_details">
-		<span id="products_cart"><!-- numero de produtos no carrinho--></span><br/>
-		<span class="border_cart"></span>Total: <span class="price"><!-- Total de compras no carrinho --></span>
+		<span id="products_cart">
+            {{ numeroProdutosCarrinho() | length }}
+            <!-- numero de produtos no carrinho-->
+        </span> Produtos <br/>
+		<span class="border_cart"></span>
+        Total: <span class="price"> R$
+        {{ valorProdutosCarrinho() | number_format(2,',','.') }}
+        <!-- Total de compras no carrinho --></span><br/><a href="/carrinho">Ver Carrinho</a>
 	</div>
 
     <div class="cart_icon">
