@@ -34,15 +34,22 @@
     </tbody>
     <tfoot>
         <tr>
-            <td>
-                Total da Compra
-            </td>
-            <td></td>
-            <td></td>
-            <td>
-                <span class="price">R$ {{ valorProdutosCarrinho() | number_format(2,',','.') }}</span>
+            <td colspan="3">
+                Total da Compra <span class="price">R$ {{ valorProdutosCarrinho() | number_format(2,',','.') }}</span>
+                <br/>
+                Valor do Frete:
+                <br/>
+                valor total da Compra:
             </td>
         </tr>
+        <tr>
+            <td colspan="5">
+                <input type="text" name="frete" id="input-frete" placeholder="Digite o CEP para entrega"/>
+                <button id="btn_calcular_frete">Calcular frete</button>
+                <div id="mensagem-frete"></div>
+            </td>
+        </tr>
+
     </tfoot>
 
 </table>
